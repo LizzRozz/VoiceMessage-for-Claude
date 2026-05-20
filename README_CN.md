@@ -29,7 +29,7 @@
 - 一个语音 API（能把文字变成 MP3 的服务）
 
 **调试请务必新开对话窗口！**
-**不要在上下文很长窗口中进行测试，每次重新加载 connector 似乎会导致缓存异常，usage异常飙升**
+**不要在上下文很长窗口中进行测试，否则每次重新加载 connector 都会导致缓存异常，usage异常飙升**
 
 ### 1. 克隆并配置
 
@@ -77,9 +77,6 @@ docker-compose up -d
 3. 输入：`https://你的tunnel域名.trycloudflare.com/mcp`
 
 **开一个新对话**，让 Claude 说点什么。
-**调试请务必新开对话窗口！**
-**不要在上下文很长窗口中进行测试，每次重新加载 connector 似乎会导致缓存异常，usage异常飙升**
-
 
 ## 语音 API 接入
 
@@ -176,9 +173,6 @@ Claude 里显示的 connector 图标取决于你的域名。如果用 Cloudflare
 docker stop voicemsg && docker rm voicemsg
 docker-compose up -d --build
 ```
-
-**调试请务必新开对话窗口！**
-**不要在上下文很长窗口中进行测试，每次重新加载 connector 似乎会导致缓存异常，usage异常飙升**
 
 ## 技术细节
 

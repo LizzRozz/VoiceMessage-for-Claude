@@ -29,7 +29,7 @@ The player is a self-contained MCP App: pure inline SVG + CSS, no external depen
 - A voice API (any service that converts text to MP3)
 
 **Always start a new conversation when debugging!**
-**Do not test in a conversation with a long context — reloading the connector appears to cause caching issues, leading to abnormally high token usage.**
+**Do not reload connector in a conversation with a long context — reloading the connector appears to cause caching issues, leading to abnormally high token usage.**
 
 
 ### 1. Clone and configure
@@ -77,10 +77,7 @@ In Claude.ai:
 2. Add a new MCP connector
 3. Enter: `https://your-tunnel-domain.trycloudflare.com/mcp`
 
-Then ask Claude tp use the tool to say something.
-
-**Always start a new conversation when debugging!**
-**Do not test in a conversation with a long context — reloading the connector appears to cause caching issues, leading to abnormally high token usage.**
+Then **start a nwe chat**, and ask Claude to use the tool to say something.
 
 ## Voice API Integration
 
@@ -177,9 +174,6 @@ The connector icon shown in Claude depends on your domain. If you use a free Clo
 docker stop voicemsg && docker rm voicemsg
 docker-compose up -d --build
 ```
-
-**Always start a new conversation when debugging!**
-**Do not test in a conversation with a long context — reloading the connector appears to cause caching issues, leading to abnormally high token usage.**
 
 ## Technical Details
 
