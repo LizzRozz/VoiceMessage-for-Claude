@@ -5,9 +5,10 @@
 <h1 align="center">VoiceMessage-for-Claude</h1>
 <p align="center">利用自定义 MCP connector 让 Claude 能发语音消息</p>
 
-<!-- <p align="center">
-  <img src="./assets/demo.png" width="400" />
-</p> -->
+<p align="center">
+  < img src="./assets/Dark_CN.png" width="300" />
+  < img src="./assets/Light_CN.png" width="300" />
+</p >
 
 这是一个 MCP server，把文字变成语音，通过内嵌在 Claude.ai 聊天框里的播放器播放出来。语音合成部分由你自己接入第三方 AI 语音平台 API，本项目负责剩下的一切——MCP tool 定义、音频托管、播放器渲染、Claude iframe 握手。
 
@@ -144,7 +145,7 @@ VoiceMessage-for-Claude/
 
 ### 播放器外观
 
-播放器的 HTML/CSS 在 `server.py` 的 `PLAYER_HTML` 变量中。当前配色吸色自 iPhone Claude App 深色模式，按照 Claude 原本的界面搭配的颜色。iPhone 非深色模式可将播放器主色换成 `#FFFFFF`、框线换成 `#7A7873`，根据设备差异或个人喜好调整即可。
+播放器会自动跟随 Claude App 的深浅色模式切换配色。如需微调，可修改 PLAYER_HTML 中的 CSS 变量和 @media (prefers-color-scheme: light) 块。也可以去掉@media (prefers-color-scheme: light) 块按照个人喜好进行调整。
 
 ### Connector 图标
 

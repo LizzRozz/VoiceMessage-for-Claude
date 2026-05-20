@@ -5,9 +5,10 @@
 <h1 align="center">VoiceMessage-for-Claude</h1>
 <p align="center">Give Claude a voice using a custom MCP connector</p>
 
-<!-- <p align="center">
-  <img src="./assets/demo.png" width="400" />
-</p> -->
+<p align="center">
+  < img src="./assets/Dark_EN.png" width="300" />
+  < img src="./assets/Light_EN.png" width="300" />
+</p >
 
 An MCP server that turns text into voice messages and plays them through a compact audio player embedded right inside Claude.ai. You bring your own voice API, this project handles the rest: MCP tool definition, audio hosting, player rendering, and Claude iframe handshake.
 
@@ -145,7 +146,7 @@ Voice API variables (API key, voice ID, etc.) are up to you — add them to `.en
 
 ### Player Appearance
 
-The player HTML/CSS lives in the PLAYER_HTML variable in server.py. The current color scheme is sampled from the iPhone Claude App dark mode to match Claude’s native interface. For light mode, you can swap the player background to #FFFFFF and change the border, icon, and duration text to #7A7873 or #000000. Adjust to taste based on your device or personal preference.​​​​​​​​​​​​​​​​
+The player automatically follows Claude App’s light/dark mode. To fine-tune, modify the CSS and the @media (prefers-color-scheme: light) block in PLAYER_HTML. Adjust to taste based on your device or personal preference.​​​​​​​​​​​​​​​​
 
 ### Connector Icon
 

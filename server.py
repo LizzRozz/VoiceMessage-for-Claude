@@ -94,15 +94,22 @@ PLAYER_HTML = """<!DOCTYPE html>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;background:transparent;display:flex;align-items:center;justify-content:flex-start;min-height:56px;padding:8px 8px 8px 16px}
-.player{display:inline-flex;align-items:center;justify-content:space-between;gap:14px;width:184px;padding:12px 17px;border:1px solid #94938b;border-radius:9px;background:#2b2b29;box-shadow:none;cursor:pointer;transition:background 0.15s,transform 0.12s,width 0.2s}
+.player{display:inline-flex;align-items:center;justify-content:space-between;gap:14px;width:184px;padding:12px 17px;border:1px solid #96938c;border-radius:9px;background:#2b2b29;box-shadow:none;cursor:pointer;transition:background 0.15s,transform 0.12s,width 0.2s}
 .player:hover{background:#2b2b29}
 .player:active{transform:scale(0.985)}
 .player.playing{background:#2b2b29}
-.icon{width:21px;height:21px;flex:0 0 21px;fill:#eeeeea;margin-left:-3px}
+.icon{width:21px;height:21px;flex:0 0 21px;fill:#96938c;margin-left:-3px}
 .pause-icon{display:none}
 .player.playing .play-icon{display:none}
 .player.playing .pause-icon{display:block}
-.duration{color:#eeeeea;font-size:15px;line-height:1;font-variant-numeric:tabular-nums;white-space:nowrap}
+.duration{color:#96938c;font-size:15px;line-height:1;font-variant-numeric:tabular-nums;white-space:nowrap}
+
+@media (prefers-color-scheme: light){
+  .player{background:#FFFFFF;border-color:#7A7873}
+  .icon{fill:#7A7873}
+  .duration{color:#7A7873}
+}
+
 .loading{color:#8b8b86;font-size:12px;text-align:center;width:100%}
 </style></head><body>
 <div class="loading" id="loading">loading...</div>
