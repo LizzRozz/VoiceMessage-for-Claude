@@ -6,8 +6,8 @@
 <p align="center">利用自定义 MCP connector 让 Claude 能发语音消息</p>
 
 <p align="center">
-  < img src="./assets/Dark_CN.png" width="300" />
-  < img src="./assets/Light_CN.png" width="300" />
+  < img src="./assets/Dark_CN.jpg" width="300" />
+  < img src="./assets/Light_CN.jpg" width="300" />
 </p >
 
 这是一个 MCP server，把文字变成语音，通过内嵌在 Claude.ai 聊天框里的播放器播放出来。语音合成部分由你自己接入第三方 AI 语音平台 API，本项目负责剩下的一切——MCP tool 定义、音频托管、播放器渲染、Claude iframe 握手。
