@@ -145,7 +145,7 @@ Voice API variables (API key, voice ID, etc.) are up to you — add them to `.en
 
 ### Player Appearance
 
-The player HTML/CSS lives in the `PLAYER_HTML` variable in `server.py`. The current color scheme is sampled from the iPhone Claude App dark mode to match Claude's native interface. For iPhone light mode, you can swap the player background to `#FFFFFF` and the border to `#7A7873`. Adjust to taste based on your device or personal preference.
+The player HTML/CSS lives in the PLAYER_HTML variable in server.py. The current color scheme is sampled from the iPhone Claude App dark mode to match Claude’s native interface. For light mode, you can swap the player background to #FFFFFF and change the border, icon, and duration text to #7A7873 or #000000. Adjust to taste based on your device or personal preference.​​​​​​​​​​​​​​​​
 
 ### Connector Icon
 
