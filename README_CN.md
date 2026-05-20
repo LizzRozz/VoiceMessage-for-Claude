@@ -9,13 +9,13 @@
   <img src="./assets/demo.png" width="400" />
 </p> -->
 
-这是一个 MCP server，把文字变成语音，通过内嵌在 Claude 聊天框里的播放器播放出来。语音合成部分由你自己接入第三方 AI 语音平台 API，本项目负责剩下的一切——MCP tool 定义、音频托管、播放器渲染、Claude iframe 握手。
+这是一个 MCP server，把文字变成语音，通过内嵌在 Claude.ai 聊天框里的播放器播放出来。语音合成部分由你自己接入第三方 AI 语音平台 API，本项目负责剩下的一切——MCP tool 定义、音频托管、播放器渲染、Claude iframe 握手。
 
 ## 工作原理
 
 1. Claude 调用 `speak` 工具，传入文本
 2. 服务端调用你配置的语音 API，生成 MP3 并保存
-3. Claude 在聊天框里渲染内嵌播放器——点击即可播放
+3. Claude 在聊天框里渲染内嵌播放器，点击即可播放
 
 播放器是一个自包含的 MCP App：纯内联 SVG + CSS，不依赖任何外部资源。
 
@@ -23,10 +23,13 @@
 
 ### 前置条件
 
-- 可能需要 Claude 订阅？（但是我有没有订阅的账号也可以使用）
+- Claude 账号（Free 用户限一个自定义 connector，付费用户无限制）
 - 一台装了 Docker 的 VPS 或服务器
 - [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/)（免费）或其他将服务暴露到公网 HTTPS 的方式
 - 一个语音 API（能把文字变成 MP3 的服务）
+
+**调试请务必新开对话窗口！**
+**不要在上下文很长窗口中进行测试，每次重新加载 connector 似乎会导致缓存异常，usage异常飙升**
 
 ### 1. 克隆并配置
 
@@ -73,7 +76,10 @@ docker-compose up -d
 2. 添加新的 MCP connector
 3. 输入：`https://你的tunnel域名.trycloudflare.com/mcp`
 
-开一个新对话，让 Claude 说点什么。
+**开一个新对话**，让 Claude 说点什么。
+**调试请务必新开对话窗口！**
+**不要在上下文很长窗口中进行测试，每次重新加载 connector 似乎会导致缓存异常，usage异常飙升**
+
 
 ## 语音 API 接入
 
@@ -141,7 +147,7 @@ VoiceMessage-for-Claude/
 
 ### 播放器外观
 
-播放器的 HTML/CSS 在 `server.py` 的 `PLAYER_HTML` 变量中。当前配色吸色自 iPhone Claude App 深色模式，按照 Claude 原本的界面搭配的颜色。iPhone 非深色模式可将播放器主色换成 `#FFFFFF`、框线换成 `#7A7873`，可根据设备差异或个人喜好调整。
+播放器的 HTML/CSS 在 `server.py` 的 `PLAYER_HTML` 变量中。当前配色吸色自 iPhone Claude App 深色模式，按照 Claude 原本的界面搭配的颜色。iPhone 非深色模式可将播放器主色换成 `#FFFFFF`、框线换成 `#7A7873`，根据设备差异或个人喜好调整即可。
 
 ### Connector 图标
 
@@ -170,6 +176,9 @@ Claude 里显示的 connector 图标取决于你的域名。如果用 Cloudflare
 docker stop voicemsg && docker rm voicemsg
 docker-compose up -d --build
 ```
+
+**调试请务必新开对话窗口！**
+**不要在上下文很长窗口中进行测试，每次重新加载 connector 似乎会导致缓存异常，usage异常飙升**
 
 ## 技术细节
 

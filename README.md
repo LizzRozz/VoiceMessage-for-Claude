@@ -9,13 +9,13 @@
   <img src="./assets/demo.png" width="400" />
 </p> -->
 
-An MCP server that turns text into voice messages and plays them through a compact audio player embedded right inside the Claude chat. You bring your own voice API — this project handles the rest: MCP tool definition, audio hosting, player rendering, and Claude iframe handshake.
+An MCP server that turns text into voice messages and plays them through a compact audio player embedded right inside Claude.ai. You bring your own voice API, this project handles the rest: MCP tool definition, audio hosting, player rendering, and Claude iframe handshake.
 
 ## How It Works
 
 1. Claude calls the `speak` tool with some text
 2. The server sends the text to your configured voice API, generates an MP3, and saves it
-3. Claude renders an inline audio player widget — click to play
+3. Claude renders an inline audio player widget, click it to play
 
 The player is a self-contained MCP App: pure inline SVG + CSS, no external dependencies.
 
@@ -23,10 +23,14 @@ The player is a self-contained MCP App: pure inline SVG + CSS, no external depen
 
 ### Prerequisites
 
-- A Claude subscription may be required? (MCP connectors seem to require a subscription, but I have an unsubscribed account that also works)
+- A Claude account (Free users are limited to one custom connector; paid plans support unlimited)
 - A VPS or machine with Docker installed
 - [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/) (free) or any other way to expose the server over HTTPS
 - A voice API (any service that converts text to MP3)
+
+**Always start a new conversation when debugging!**
+**Do not test in a conversation with a long context — reloading the connector appears to cause caching issues, leading to abnormally high token usage.**
+
 
 ### 1. Clone and configure
 
@@ -74,6 +78,9 @@ In Claude.ai:
 3. Enter: `https://your-tunnel-domain.trycloudflare.com/mcp`
 
 Then ask Claude tp use the tool to say something.
+
+**Always start a new conversation when debugging!**
+**Do not test in a conversation with a long context — reloading the connector appears to cause caching issues, leading to abnormally high token usage.**
 
 ## Voice API Integration
 
@@ -170,6 +177,9 @@ The connector icon shown in Claude depends on your domain. If you use a free Clo
 docker stop voicemsg && docker rm voicemsg
 docker-compose up -d --build
 ```
+
+**Always start a new conversation when debugging!**
+**Do not test in a conversation with a long context — reloading the connector appears to cause caching issues, leading to abnormally high token usage.**
 
 ## Technical Details
 
