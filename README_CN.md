@@ -23,7 +23,7 @@
 
 ### 前置条件
 
-- 可能需要 Claude 订阅？（MCP connector 似乎需要订阅，但是我有一个没有订阅的账号也可以使用）
+- 可能需要 Claude 订阅？（但是我有没有订阅的账号也可以使用）
 - 一台装了 Docker 的 VPS 或服务器
 - [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/)（免费）或其他将服务暴露到公网 HTTPS 的方式
 - 一个语音 API（能把文字变成 MP3 的服务）
