@@ -77,7 +77,7 @@ In Claude.ai:
 2. Add a new MCP connector
 3. Enter: `https://your-tunnel-domain.trycloudflare.com/mcp`
 
-Then **start a nwe chat**, and ask Claude to use the tool to say something.
+Then **start a new chat**, and ask Claude to use the tool to say something.
 
 ## Voice API Integration
 
