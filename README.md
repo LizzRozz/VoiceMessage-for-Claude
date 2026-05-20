@@ -5,12 +5,14 @@
 <h1 align="center">VoiceMessage-for-Claude</h1>
 <p align="center">Give Claude a voice using a custom MCP connector</p>
 
-<p align="center">
-  <img src="./assets/Dark_EN.jpg" width="300"/>
-  <img src="./assets/Light_EN.jpg" width="300"/>
-</p>
+
 
 An MCP server that turns text into voice messages and plays them through a compact audio player embedded right inside Claude.ai. You bring your own voice API, this project handles the rest: MCP tool definition, audio hosting, player rendering, and Claude iframe handshake.
+
+<p align="center">
+  <img src="./assets/Dark_EN.jpg" width="400"/>
+  <img src="./assets/Light_EN.jpg" width="400"/>
+</p>
 
 ## How It Works
 

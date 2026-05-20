@@ -10,8 +10,8 @@
 这是一个 MCP server，把文字变成语音，通过内嵌在 Claude.ai 聊天框里的播放器播放出来。语音合成部分由你自己接入第三方 AI 语音平台 API，本项目负责剩下的一切——MCP tool 定义、音频托管、播放器渲染、Claude iframe 握手。
 
 <p align="center">
-  <img src="./assets/Dark_CN.jpg" width="500"/>
-  <img src="./assets/Light_CN.jpg" width="500"/>
+  <img src="./assets/Dark_CN.jpg" width="400"/>
+  <img src="./assets/Light_CN.jpg" width="400"/>
 </p>
 
 ## 工作原理
