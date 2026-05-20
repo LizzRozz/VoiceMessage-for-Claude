@@ -9,11 +9,6 @@
   <img src="./assets/demo.png" width="400" />
 </p> -->
 
-<p align="center">
-  <img src="https://img.shields.io/badge/license-MIT-blue" />
-  <img src="https://img.shields.io/badge/MCP-compatible-green" />
-</p>
-
 An MCP server that turns text into voice messages and plays them through a compact audio player embedded right inside the Claude chat. You bring your own voice API — this project handles the rest: MCP tool definition, audio hosting, player rendering, and Claude iframe handshake.
 
 ## How It Works
