@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  voicemsg:
+    build: .
+    container_name: voicemsg
+    ports:
+      - "18002:8001"
+    environment:
+      - BASE_URL=${BASE_URL:-}
+    volumes:
+      - ./audio_cache:/app/audio_cache
+    restart: unless-stopped
