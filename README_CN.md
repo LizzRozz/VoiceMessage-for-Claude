@@ -1,5 +1,5 @@
 <p align="right">
-  <a> 简体中文 </a> | <ba href="./README.md"> English </b>
+  <a> 简体中文 </a> | <b href="./README.md"> English </b>
 </p>
 
 <h1 align="center">VoiceMessage-for-Claude</h1>
