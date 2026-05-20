@@ -52,8 +52,7 @@ async def synthesize(text: str, filepath: Path) -> None:
     """
     raise NotImplementedError("Please implement your TTS API here - see comments above")
 
-# ─────────────────────────────────────────────
-
+#===================================================
 
 def _origin(url: str) -> str | None:
     parsed = urlparse(url)
@@ -95,7 +94,7 @@ PLAYER_HTML = """<!DOCTYPE html>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;background:transparent;display:flex;align-items:center;justify-content:flex-start;min-height:56px;padding:8px 8px 8px 16px}
-.player{display:inline-flex;align-items:center;justify-content:space-between;gap:14px;width:184px;padding:12px 17px;border:1px solid #94938b;border-radius:9px;background:#2b2b29;box-shadow:0 8px 18px rgba(23,23,23,0.08);cursor:pointer;transition:background 0.15s,transform 0.12s,width 0.2s}
+.player{display:inline-flex;align-items:center;justify-content:space-between;gap:14px;width:184px;padding:12px 17px;border:1px solid #94938b;border-radius:9px;background:#2b2b29;box-shadow:none;cursor:pointer;transition:background 0.15s,transform 0.12s,width 0.2s}
 .player:hover{background:#2b2b29}
 .player:active{transform:scale(0.985)}
 .player.playing{background:#2b2b29}
